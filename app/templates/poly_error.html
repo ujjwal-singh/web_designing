@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+
+    <h1 style="color:maroon">ERROR -- Invalid syntax </h1>
+    {% if mismatch %}
+        <h2 style="color:maroon">The sizes of x list and f(x) list did not match </h2>
+    {% else %} 
+        <h2 style="color:maroon">There was some error in the type of input for the numbers or a field was left empty </h2>
+    {% endif %}
+    <p style="text-align:left"> <a href=http://127.0.0.1:5000/polynomial>Try again</a> </p>
+    <p style="text-align:left"> <a href=http://127.0.0.1:5000/>Go to Home</a> </p>
+
+{% endblock %}
