@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Enter x values and f(x) values</h2>  
+    <h2>The values should be separated by space(s) only</h2> 
+    <h2>(The required polynomial will be calculated and its graph will be displayed)</h2> <br>
+    <form action="/polynomial/answer" method="POST">
+        <p> x values : </p>
+        <p> <input type="text" name="x_values" style="background-color:yellow"> </p> <br> <br>
+        <p> f(x) values : </p>
+        <p> <input type="text" name="f(x)_values" style="background-color:yellow"> </p>
+        <p> <input type="submit" name="my-form" value="Calculate"> </p>
+    </form> <br> <br>
+    <p style="text-align:left"> <a href=http://127.0.0.1:5000/>Go to Home</a> </p>
+
+{% endblock %}
