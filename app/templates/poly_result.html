@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+    <h3> You had entered : </h3>
+    <h3> x values : </h3>
+    {% for i in x %}
+        <p> --> {{i}} </p> 
+    {% endfor %}
+
+    <br>
+
+    <h3> f(x) values : </h3>
+    {% for i in y %}
+        <p> --> {{i}} </p> 
+    {% endfor %}
+
+    <p>The required polynomial is : ( {{answer}} )</p>
+
+    <p> <img src="../static/graph.png" width="640" height="480" /> </p> <br> <br>
+    <p style="text-align:left"> <a href=http://127.0.0.1:5000/polynomial>Go Back</a> </p> 
+    <p style="text-align:left"> <a href=http://127.0.0.1:5000/>Go to Home</a> </p>
+
+{% endblock %}
