@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+
+    {% if empty %}
+        <h2 style="color:maroon"> ERROR -- No numbers were given </h2>
+    {% else %}
+        <h1 style="color:maroon">ERROR -- Invalid syntax </h1>
+        <p> (There was some error in the type of input for the numbers) </p>
+    {% endif %}
+        <p style="text-align:left"> <a href=http://127.0.0.1:5000/avg>Try again</a> </p>
+        <p style="text-align:left"> <a href=http://127.0.0.1:5000/>Go to Home</a> </p>
+
+{% endblock %}
