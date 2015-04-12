@@ -36,7 +36,7 @@ def find_polynomial():
     from numpy.polynomial import polynomial as P    
     import matplotlib.pyplot as plt
     import matplotlib.patches as mpatches
-    import os
+    import os, sys
 
     try:
         x=[float(i) for i in request.form['x_values'].split()]
@@ -94,12 +94,14 @@ def find_polynomial():
         plt.axhline(0,color="k")
         plt.xlabel(" x values ")
         plt.ylabel("f(x) values")
-        plt.legend(handles=Legend) 
-        if os.path.exists("C:\\Python34\\itws\\app\\static\\graph.png"):
-            os.remove("C:\\Python34\\itws\\app\\static\\graph.png")
-            plt.savefig("C:\\Python34\\itws\\app\\static\\graph.png", format="png", dpi=fig.dpi)
+        plt.legend(handles=Legend)
+        dir=sys.path[0]
+        dir+="\\app\\static\\graph.png" 
+        if os.path.exists(dir):
+            os.remove(dir)
+            plt.savefig(dir, format="png", dpi=fig.dpi)
         else:             
-            plt.savefig("C:\\Python34\\itws\\app\\static\\graph.png", format="png", dpi=fig.dpi)                                                                                         
+            plt.savefig(dir, format="png", dpi=fig.dpi)                                                                                         
 
     return render_template("poly_result.html",answer=Lagrange(x,y),x=x,y=y) 
 
