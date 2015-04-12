@@ -1,3 +1,11 @@
+@keyframes anim_1 {
+    0% {color:red;}
+    25% {color:yellow;}
+    50% {color:green;}
+    75% {color:blue;}
+    100% {color:orange;}
+}
+
 head {
     background-color: #d0e4fe;
     align: center;
@@ -12,6 +20,10 @@ h1 {
     text-decoration: underline;
     color: orange;
     text-align: center;
+    animation-name: anim_1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 h2 {
